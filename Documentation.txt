@@ -1,0 +1,791 @@
+IFS Library :
+	Applications
+	performanceIndicies
+	IFS
+		Distances
+		Similarities
+		Miscellaneous
+		
+	
+
+Distances
+Functions : 
+
+IFS_Dist00(A , B , type)
+IFS_Dist01(A , B , type)
+IFS_Dist02(A,B,type,w,p=1) 
+IFS_Dist03(A,B,type) 
+IFS_Dist04(A,B,type)
+IFS_Dist05(A, B)
+
+
+
+IFS_Dist00(A , B , type)
+	Calculates distance between the intuitionistic fuzzy
+    	sets A and B. Distances proposed by K.T. Atanassov, from the related article
+    	"Distances between intuitionistic fuzzy sets"
+	Parameters : 
+
+	A , B =  2-D matrices containing in the first row the membership values and
+        		in the second the non-membership values.
+	type =  Type of computed distance {
+		'H' for Hamming,
+		 'E' for Euclidean,
+		 'nH' for normalized Hamming and
+		 'nE' for normalized Euclidean.
+		}
+	Return :
+ 		Distance measure.
+IFS_Dist01(A , B , type)
+	IFS_DIST01: Calculates distance between the intuitionistic fuzzy
+ 	sets A and B.
+ 	Distances proposed by E. Szmidt and J. Kacprzyk, from the related article
+ 	"Distances between intuitionistic fuzzy sets".
+	Parameters : 
+	A , B =  2-D matrices containing in the first row the membership values and
+        		in the second the non-membership values.
+	type =  Type of computed distance {
+		'H' for Hamming,
+		 'E' for Euclidean,
+		 'nH' for normalized Hamming and
+		 'nE' for normalized Euclidean.
+		}
+	Return :
+ 		Distance measure.
+IFS_Dist02(A,B,type,w,p=1) 
+	IFS_DIST02: Calculates distance between the intuitionistic fuzzy
+	sets A and B.
+ 	Distances proposed by W. Wang and X. Xin, from the related article
+	"Distance measure between intuitionistic fuzzy sets"
+	Parameters:
+	A, B: 2-D matrices containing in the first row the membership values and
+   		in the second the non-membership values.
+  		 type: Type of computed distance: 1 or 2.
+	w: weights for the computed distance.
+	p: must be a positive integer. Used only for type = 2. Default = 1
+	type: 1 or 2 
+	Return :
+ 		Distance measure.
+
+IFS_Dist03(A,B,type) 
+	IFS_DIST03: Calculates distance between the intuitionistic fuzzy
+  	sets A and B.
+  	Distances proposed by Y. Yang and F. ChiclanA,B, from the related article
+ 	"Consistency of 2D and 3D distances of intuitionistic fuzzy sets"
+	Parameters:
+	A, B: 2-D matrices containing in the first row the membership values and
+   		in the second the non-membership values.
+  		 type: 
+	type =  Type of computed distance {
+		'H' for Hamming,
+		 'E' for Euclidean,
+		 'nH' for normalized Hamming and
+		 'nE' for normalized Euclidean.
+		}
+	
+	Return :
+ 		Distance measure
+
+IFS_Dist04(A,B,type) 
+	IFS_DIST04: Calculates distance between the intuitionistic fuzzy
+   	sets A and B.
+  	Distances proposed by P. Grzegorzewski, from the related article
+  	"Distances between intuitionistic fuzzy sets and/or interval-valued fuzzy
+ 	 sets based on the Hausdorff metric"
+	Parameters:
+	A, B: 2-D matrices containing in the first row the membership values and
+   		in the second the non-membership values.
+  		 
+	type =  Type of computed distance {
+		'H' for Hamming,
+		 'E' for Euclidean,
+		 'nH' for normalized Hamming and
+		 'nE' for normalized Euclidean.
+		}
+	Return :
+ 		Distance measure
+
+IFS_Dist05(A, B):
+ 	Calculates distance between the intuitionistic fuzzy
+     	sets A and B.
+     	Distances proposed by I.K. Vlachos, G.D. Sergiadis, from the related article
+     	"Intuitionistic fuzzy information - Applications to pattern recognition"
+	
+	Parameters:
+	
+	A, B: 2-D matrices containing in the first row the membership values and
+   		in the second the non-membership values.
+ 	
+	Return :
+ 		Distance measure	
+
+Similarities
+Functions : 
+similarity(similarityMeasure, A, B, p = None, w = None, type = None, omegas = None, a = None, b = None, c = None, lamda = None)
+IFS_Sim01(A, B,p, w)
+IFS_Sim02(A, B, p, type, w = np.array([]), omegas = None )	
+IFS_Sim03(A, B ,p, w)
+IFS_Sim04(A,B ,p, w)
+IFS_Sim05(A, B ,p, w, type)
+IFS_Sim06(A, B,type, w)
+IFS_Sim07(A,B, w)
+IFS_Sim08(A, B,w)
+IFS_Sim09(A, B ,a, type)
+IFS_Sim10(A ,  B)
+IFS_Sim11(A, B ,type)
+IFS_Sim12(A, B,w)
+IFS_Sim13(A,B ,p, type)
+IFS_Sim14(A, B , w, a,b,c)
+IFS_Sim15(A, B,w, a, b ,c)
+IFS_Sim16(A, B,p, w, a=0,b=0,c=0)
+IFS_Sim17(A,B, type, lamda)
+IFS_Sim18(A,B, w)
+IFS_Sim19(A , B)
+IFS_Sim20(A , B)
+IFS_Sim21(A,B)
+IFS_Sim22(A,B)
+IFS_Sim23(A , B)
+
+
+IFS_Sim01(A, B,p, w):
+	IFS_SIM01: Calculates similarity between the intuitionistic fuzzy sets A and B.
+        	Similarity proposed by L. Dengfeng, C. Chuntian, from the related article
+        	"New similarity measures of intuitionistic fuzzy sets and application to pattern recognition"
+	
+	Parameters:
+	
+	A, B: 2-D matrices containing in the first row the membership values and
+   		in the second the non-membership values.
+	p: power parameter. Must be equal or higher than 1.
+     	
+	w: weights for the computed similarity. If 0 then the non-weighted
+     	similarity is computed.
+
+          OUTPUT:
+        	S: Similarity measure.	 
+
+IFS_Sim02(A, B, p, type, w = np.array([]), omegas = None ):
+	IFS_SIM02: Calculates similarity between the intuitionistic fuzzy
+        	sets A and B.
+        	Similarities proposed by Z. Liang, P. Shi, from the related article
+        	"Similarity measures on intuitionistic fuzzy sets"
+	
+	Parameters : 
+	
+		A, B: 2-D matrix containing in the first row the membership values and
+         			in the second the non-membership values.
+         		type: Type of computed similarity: 'e', 's' or 'h'.
+`        		p: power parameter. Must be equal or higher than 1.
+         		w: weights for the computed similarity. Used only for type = 'h'. Can
+        			 be ommited.
+         		omegas: matrix containing values that belong to [0,1]. The sum of the
+         			matrix must be equal to 1. Used only for type = 'h'
+		OUTPUT:
+        			S: Similarity measure.
+IFS_Sim03(A, B ,p, w):
+	IFS_SIM03: Calculates similarity between the intuitionistic fuzzy
+  		sets A and B.
+  		Similarity proposed by J.H. Park, J.S. Park, Y.C. Kwun, K.M. Lim, from
+  		the related article "New similarity measures on intuitionistic fuzzy sets"
+	
+	Parameters:
+		A, B: 2-D matrix containing in the first row the membership values,
+    			in the second the non-membership values and in the third the hesitation
+    			degree.
+ 		w: weights for the computed similarity.
+		p: power parameter. Must be equal or higher than 1.
+	
+	Return:
+    		S: Similarity between the intuitionistic fuzzy set A and the intuitionistic
+ 			fuzzy set of the ideally segmented image.
+
+IFS_Sim04(A,B ,p, w):
+	IFS_SIM04: Calculates similarity between the intuitionistic fuzzy
+    		sets A and B.
+    		Similarity proposed by H.B. Mitchell, from the related article
+    		"On the Dengfeng-Chuntian similarity measure and its application to pattern recognition"
+
+	Parameters:
+		A, B: 2-D matrix containing in the first row the membership values,
+    			in the second the non-membership values and in the third the hesitation
+    			degree.
+ 		w: weights for the computed similarity.
+		p: power parameter. Must be equal or higher than 1.
+	
+	Return:
+    		S: Similarity between the intuitionistic fuzzy set A and the intuitionistic
+ 			fuzzy set of the ideally segmented image.
+
+IFS_Sim05(A, B ,p, w, type):
+	IFS_SIM05: Calculates similarity between the intuitionistic fuzzy
+     		sets A and B.
+    		Similarities proposed by P. Julian, K.C. Hung, S.J. Lin, from the related article
+    		"On the Mitchell similarity measure and its application to pattern recognition"
+	Parameters : 
+		A, B: 2-D matrix containing in the first row the membership values and
+        			in the second the non-membership values.
+	    	p: must be a positive integer.
+	    	w: weights for the computed similarity.
+	    	type: Type of computed similarity: 1 or 2.
+	Return : 
+         		Similarity between the intuitionistic fuzzy set A and the intuitionistic
+	    	fuzzy set of the ideally segmented image.
+IFS_Sim06(A, B,type, w):
+    	IFS_SIM06: Calculates similarity between the intuitionistic fuzzy
+ 		    sets A and B.
+ 		    Similarities proposed by W.L. Hung, M.S. Yang, from the related article
+ 		    "Similarity measures of intuitionistic fuzzy sets based on Hausdorff similarity"
+	Parameters : 
+		A, B: 2-D matrix containing in the first row the membership values and
+        			in the second the non-membership values.
+		w: weights for the computed similarity.
+	    	type: Type of computed similarity: 'l', 'e' or 'c'
+	Return : 
+         		Similarity between the intuitionistic fuzzy set A and the intuitionistic
+	    	fuzzy set of the ideally segmented image.
+
+IFS_Sim07(A,B, w):
+    	IFS_SIM07: Calculates similarity between the intuitionistic fuzzy
+     		sets A and B.
+     		Similarity proposed by J. Yen, from the related article
+    		"Cosine similarity measures for intuitionistic fuzzy sets and their applications"
+	Parameters:
+		A, B: 2-D matrix containing in the first row the membership values and
+        			in the second the non-membership values.
+		w: weights for the computed similarity.
+	Return : 
+         		Similarity between the intuitionistic fuzzy set A and the intuitionistic
+	    	fuzzy set of the ideally segmented image.
+IFS_Sim08(A, B,w):
+        	IFS_SIM08: Calculates similarity between the intuitionistic fuzzy
+     		sets A and B.
+     		Similarity proposed by C.M.  Hwang and M.S. Yang, from the related article
+     		"Modified cosine similarity measure between intuitionistic fuzzy sets"
+
+     	Parameters:
+      		A, B: 2-D matrix containing in the first row the membership values and
+       			in the second the non-membership values.
+    		w: weights for the computed similarity.
+     	Return:
+       		Similarity between the intuitionistic fuzzy set A and the intuitionistic
+    		fuzzy set of the ideally segmented image.
+
+IFS_Sim09(A, B ,a, type):
+     	IFS_SIM09: Calculates similarity between the intuitionistic fuzzy
+ 		sets A and B.
+ 		Similarities proposed by W.L. Hung, M.S. Yang, from the related article
+ 		"On the J-divergence of intuitionistic fuzzy sets with its applications to pattern recognition"
+
+ 	Parameters:
+   		A, B: 2-D matrix containing in the first row the membership values,
+   			in the second the non-membership values and in the third the hesitation
+   			degree
+		a: case of divergence measure. Positive integer.
+   		type: Type of computed similarity: 'l', 'e' or 'c'.
+ 	Return:
+   		Similarity between the intuitionistic fuzzy set A and the intuitionistic
+		fuzzy set of the ideally segmented image.
+IFS_Sim10(A ,  B):
+     	IFS_SIM10: Calculates similarity between the intuitionistic fuzzy
+ 		sets A and B.
+ 		Similarity proposed by C. Zhang, H. Fu, from the related article
+ 		"Similarity measures on three kinds of fuzzy sets"
+
+	Parameters:
+   		A, B: 2-D matrix containing in the first row the membership values,
+   			in the second the non-membership values and in the third the hesitation
+   			degree
+ 	Return:
+   		Similarity between the intuitionistic fuzzy set A and the intuitionistic
+		fuzzy set of the ideally segmented image.
+
+IFS_Sim11(A, B ,type):
+    	IFS_SIM11: Calculates similarity between the intuitionistic fuzzy
+    		sets A and B.
+    		similaritys proposed by W.L. Hung and M.S. Yang, from the related article
+    		"On similarity measures between intuitionistic fuzzy sets"
+
+    	Parameters:
+        		A, B: 2-D array containing in the first dimension the membership values
+        			and in the second the non-membership values.
+        		type: Type of computed similarity: 'w1', 'w2', 'pk1', 'pk2', 'pk3', 'new1'
+	    		or 'new2'.
+    	Return:
+   		Similarity between the intuitionistic fuzzy set A and the intuitionistic
+		fuzzy set of the ideally segmented image.
+
+IFS_Sim12(A, B,w):
+    	IFS_SIM12: Calculates similarity between the intuitionistic fuzzy
+		 sets A and B.
+ 		similaritys proposed by S.M. Chen, from the related article
+ 		"Measures of similarity between vague sets"
+
+	Parameters:
+      		A, B: 2-D matrix containing in the first row the membership values and
+       			in the second the non-membership values.
+    		w: weights for the computed similarity.
+     	Return:
+       		Similarity between the intuitionistic fuzzy set A and the intuitionistic
+    		fuzzy set of the ideally segmented image.
+
+IFS_Sim13(A,B ,p, type):
+    	IFS_SIM13: Calculates similarity between the intuitionistic fuzzy
+ 		sets A and B.
+ 		Similarities proposed by W.L. Hung and M.S. Yang, from the related article
+ 		"Similarity measures of intuitionistic fuzzy sets based on Lp metric"
+
+ 	Parameters:
+   		A, B: 2-D array containing in the first row the membership values and
+   			in the second the non-membership values.
+		p: must be a positive integer.
+   		type: Type of computed similarity: 'l', 'e' or 'c'
+	Return:
+       		Similarity between the intuitionistic fuzzy set A and the intuitionistic
+    		fuzzy set of the ideally segmented image.
+
+
+IFS_Sim14(A, B , w, a,b,c):
+    	IFS_SIM14: Calculates similarity between the intuitionistic fuzzy
+ 		sets A and B.
+ 		Similarities proposed by D.H. Hong and C.Kim, from the related article
+ 		"A note on similarity measures between vague sets and between elements"
+
+ 	Parameters:
+   		A, B: 2-D array containing in the first row the membership values and
+   			in the second the non-membership values.
+		w: weights for the computed similarity. Can be 0.
+		a, b, c: Positive integers.
+	Return:
+       		Similarity between the intuitionistic fuzzy set A and the intuitionistic
+    		fuzzy set of the ideally segmented image.
+
+IFS_Sim15(A, B,w, a, b ,c):
+	IFS_SIM15: Calculates similarity between the intuitionistic fuzzy
+ 		   sets A and B.
+ 		   Similarity proposed by S.M. Chen, from the related article
+ 		   "Similarity measure between vague sets and between elements"
+	Parameters:
+   		A, B: 2-D array containing in the first row the membership values and
+   			in the second the non-membership values.
+		w: weights for the computed similarity. Can be 0.
+		a, b, c: Positive integers.
+	Return:
+       		Similarity between the intuitionistic fuzzy set A and the intuitionistic
+    		fuzzy set of the ideally segmented image.
+IFS_Sim16(A, B,p, w, a=0,b=0,c=0):
+	IFS_SIM16: Calculates similarity between the intuitionistic fuzzy
+    		    sets A and B.
+    		    similaritys proposed by H.W. Liu, from the related article
+    		    "New similarity measures between intuitionistic fuzzy sets and between elements"
+	Parameters:
+   		A, B: 2-D array containing in the first row the membership values and
+   			in the second the non-membership values.
+		w: weights for the computed similarity. Can be 0.
+		a, b, c: Positive integers.
+		p: must be a positive integer.
+	Return:
+       		Similarity between the intuitionistic fuzzy set A and the intuitionistic
+    		fuzzy set of the ideally segmented image.
+
+
+def IFS_Sim17(A,B, type, lamda):
+    	IFS_SIM17: Calculates similarity between the intuitionistic fuzzy
+    		    sets A and B.
+    		    similaritys proposed by Ion Iancu, from the related article
+    		    "Intuitionistic fuzzy similarity measures based on Frank t-norms family"
+	Parameters:
+		A, B: 2-D matrix containing in the first row the membership values,
+    			in the second the non-membership values and in the third the hesitation
+    			degree.
+    		type: Type of computed similarity: 1-20.
+ 		lambda: Frank family of t-operator parameter. Different cased of input:
+ 		                  0, 1, np.inf and other numbers.
+	Return:
+    		Similarity measure.
+IFS_Sim18(A,B, w):
+	IFS_SIM18: Calculates similarity between the intuitionistic fuzzy
+    		sets A and B.
+    		    Similarities proposed by Yafei Song, Xiaodan Wang, Lei Lei, Aijun Xue, from the related article
+    		    "A novel similarity measure on intuitionistic fuzzy sets with its applications"
+  	Parameters:
+		A, B: 2-D matrix containing in the first row the membership values,
+    			in the second the non-membership values and in the third the hesitation
+    			degree.
+		w: weights for the computed similarity. Can be 0.
+	Return:
+    		Similarity measure.
+IFS_Sim19(A , B):
+	IFS_SIM19: Calculates similarity between the intuitionistic fuzzy
+ 		    sets A and B.
+ 		    similaritys proposed by Peerasak Intarapaiboon, from the related article
+ 		    "A hierarchy-based similarity measure for intuitionistic fuzzy sets"
+
+	Parameters:
+		A, B: 2-D matrix containing in the first row the membership values,
+    			in the second the non-membership values and in the third the hesitation
+    			degree.
+	Return:
+    		Similarity measure.
+IFS_Sim20(A,B):
+	IFS_SIM20: Calculates similarity between the intuitionistic fuzzy
+ 		sets A and B.
+ 		Similarities proposed by Guannan Deng, Yanli Jiang, Jingchao Fu, from the related article
+ 		"Monotonic similarity measures between intuitionistic fuzzy sets and their relationship with
+ 		entropy and inclusion measure"
+
+	Parameters:
+		A, B: 2-D matrix containing in the first row the membership values,
+    			in the second the non-membership values and in the third the hesitation
+    			degree.
+	Return:
+    		Similarity measure.
+
+
+IFS_Sim21(A,B):
+	IFS_SIM21: Calculates similarity between the intuitionistic fuzzy
+   		   sets A and B.
+   		   Distances proposed by Hoang Nguyen, from the related article
+   		   "A novel similarity/dissimilarity measure for intuitionistic fuzzy sets and its application
+   		    in pattern recognition"
+	Parameters:
+		A, B: 2-D matrix containing in the first row the membership values,
+    			in the second the non-membership values and in the third the hesitation
+    			degree.
+	Return:
+    		Similarity measure.
+
+IFS_Sim22(A,B):
+	IFS_SIM22: Calculates similarity between the intuitionistic fuzzy
+ 		    sets A and B.
+ 		    Distances proposed by Shyi-Ming Chen, Shou-Hsiung Cheng,Tzu-Chun Lan, from the related article
+ 		    "A novel similarity measure between intuitionistic fuzzy sets based on the centroid
+ 		     points of transformed fuzzy numbers with applications to pattern recognition"
+	Parameters:
+		A, B: 2-D matrix containing in the first row the membership values,
+    			in the second the non-membership values and in the third the hesitation
+    			degree.
+	Return:
+    		Similarity measure.
+IFS_Sim23(A,B):
+	IFS_SIM23: Calculates similarity between the intuitionistic fuzzy
+ 		sets A and B.
+ 		Similarities proposed by P. MuthukumarA,B, G. Sai Sundara KrishnanbA,B, from the related article
+ 		"A similarity measure of intuitionistic fuzzy soft sets and itsapplication in medical diagnosis"
+	Parameters:
+		A, B: 2-D matrix containing in the first row the membership values,
+    			in the second the non-membership values and in the third the hesitation
+    			degree.
+	Return:
+    		Similarity measure.
+
+IFS_Misc
+	
+fuzzyDivergence (A , B):
+    	FUZZYDIVERGENCE: Calculates distance between the intuitionistic fuzzy
+    			   sets A and B.
+    			   Distances proposed by Tamalika Chaira, A.K. Ray, from the related article
+    			   "Threshold selection using fuzzy set theory"
+	
+	Parameters:
+		A, B: 2-D matrix containing in the first row the membership values,
+    			in the second the non-membership values and in the third the hesitation
+    			degree.
+	Return:
+        		Distance measure.
+fuzzyIndex(A,k):
+ 	FUZZYINDEX: Calculates distance between the intuitionistic fuzzy
+ 		         sets A and B.
+ 		         Distances proposed by Tamalika Chaira, A.K. Ray, from the related article
+ 		         "Threshold selection using fuzzy set theory"
+	Parameters:
+		A, B: 2-D matrix containing in the first row the membership values,
+    			in the second the non-membership values and in the third the hesitation
+    			degree.
+		k: 0.5 for quadratic index or 1 for linear index
+	Return:
+        		Distance measure.
+fuzzyGeometry(A,x,y):
+    	FUZZYGEOMETRY: Calculates distance between the intuitionistic fuzzy
+    			sets A and B.
+    			Distances proposed by Tamalika Chaira, A.K. Ray, from the related article
+    			"Threshold selection using fuzzy set theory"
+
+    	Parameters:
+        		A: 2-D matrix containing in the first row the membership values and
+        			in the second the non-membership values.
+		x, y: dimensions of original image.
+	Return:
+        		Distance measure.
+
+
+Applications
+
+Functions : 
+	****ifs_from_num(num,A , B , p = None , w = None , type = None , omegas = None , a = None , b = None , c = None , 
+		lamda = None , k= None,x = None , y = None , inputs = False)**** Deleted
+	
+	****Fuzzy_Divergence_Measures(Ia, Ib , mask,mask2)****
+	
+	distance_Threshold(Ia , Ib,dist , w = np.array([]) , lamdbda = 0.2 , mask = np.array([]) , mask2 = np.array([]),
+                       		ty = 'H' , value = False , level = True):
+	
+	simularity_Threshold(Ia, Ib, sim, w=np.array([]), lamdbda=0.2, mask=np.array([]), mask2=np.array([]),
+                     		ty='l', value=False, level=True)
+	
+	misc_Threshold(Ia, Ib, mis, k=0.5, lamdbda=0.2, mask=np.array([]), mask2=np.array([]), value=False, level=True)
+
+
+
+ifs_from_num(num,A , B , p = None , w = None , type = None , omegas = None , a = None , b = None , c = None , 
+		lamda = None , k= None,x = None , y = None , inputs = False):
+	ifs_from_num: This function takes a number from 1 - 103 if 'inputs' is false else if 'inputs' is true it takes numbers from 0-31
+		and it returns the distance or simularity that corresponds with the number
+	
+	parameters : 
+		needs : 
+		num : positive integer { if inputs equals False [1-103] else [0-31]
+					
+		A, B: 2-D matrix containing in the first row the membership values,
+    			in the second the non-membership values and in the third the hesitation
+    			degree.
+
+		not mandatory:
+				
+			w: weights for the computed distance.
+			p: must be a positive integer
+			type = can be 1-20 or H,nH,E,nE  or l,e,c. etc it depends on the the function tha will be called
+			omegas = matrix containing values that belong to [0,1]. The sum of the
+         				matrix must be equal to 1
+			a, b, c: Positive integers.
+			lamda = Frank family of t-operator parameter. Different cased of input:
+ 		                  		0, 1, np.inf and other numbers.
+			k= 0.5 for quadratic index or 1 for linear index
+			x, y: dimensions of original image.
+			inputs = default False. If you want to call a function with default inputs then inputs should be False .Else inputs should be True
+
+
+distance_Threshold(Ia , Ib,dist , w = np.array([]) , lamdbda = 0.2 , mask = np.array([]) , mask2 = np.array([]),
+                       		ty = 'H' , value = False , level = True):
+		calculates the threshold value for the image using the selected distance function.
+		
+		Parameters : 
+			Ia , Ib = 2-D matrix containing in the first row the membership values,
+    			in the second the non-membership values and in the third the hesitation
+    			degree.
+			
+			dist = the name of the distance it can be one of these : {
+				'FuzzyDistance',
+          				'IFSDistance',
+          				'wangXinDistance',
+          				'yangChiclanaDistance',
+          				'grzegorDistance',
+          				'vlachSergDistance'
+			}
+			
+			w: weights for the computed distance. Default = np.full(x*y , 1.0/x*y) where x,y = dimensions of original image.
+			lamdbda : lambda parameter for the calculation of the hesitation degree . Default = 0.2 
+			mask = , mask2 = Mask used to skip pixels that belong to the black part of the mask.
+			ty = can be 1-2 or H,nH,E,nE  etc it depends on the the function that will be called
+			level = if True returns level
+			value = if True returns the value of the distance
+			If both level and value are True then it returns a list [value , level]
+
+			Returns:
+				level: Threshold level calculated.
+				value: Value of the distance of the corresponding threshold value.
+
+			
+Fuzzy_Divergence_Measures(Ia, Ib , mask,mask2):
+	calculates the threshold values for the image using all  distance and simularity functions.
+
+	Parameters:
+		Ia , Ib = 2-D matrix containing in the first row the membership values,
+    			in the second the non-membership values and in the third the hesitation
+    			degree.
+		mask = , mask2 = Mask used to skip pixels that belong to the black part of the mask.
+		
+	Returns:
+		list that contains the threshold values of the image using all  distance and simularity functions.
+
+
+
+simularity_Threshold(Ia, Ib, sim, w=np.array([]), lamdbda=0.2, mask=np.array([]), mask2=np.array([]),
+                     		ty='l', value=False, level=True):
+	
+	calculates the threshold value for the image using the selected Simularity function.
+	
+	Parameters:
+		Ia , Ib = 2-D matrix containing in the first row the membership values,
+    			in the second the non-membership values and in the third the hesitation
+    			degree.
+		mask = , mask2 = Mask used to skip pixels that belong to the black part of the mask.
+		sim = the name of the simularity it can be one of these : {
+			'dengChunSimilarity',
+    			'liangShiSimilarity',
+    			'parkKwunLimSimilarity',
+    			'mitchellSimilarity',
+    			'julHungLinSimilarity',
+    			'hungYangSimilarity',
+    			'yenSimilarity',
+    			'hwangYangSimilarity',
+    			'hungYangSimilarity2',
+    			'zhangFuSimilarity',
+    			'hungYangSimilarity3',
+    			'chenSimilarity',
+    			'hungYangDistance4',
+   		 	'hongKimSimilarity',
+    			'chenSimilarity2',
+    			'liuSimilarity',
+    			'iancuSimilarity',
+    			'songWangLeiXueSimilarity',
+    			'intarapaiboonSimilarity',
+    			'dengJiangFuSimilarity',
+    			'nguyenSimilarity',
+    			'chenChengLanSimilarity',
+    			'muthuKrishSimilarity'
+		}
+		w: weights for the computed distance. Default = np.full(x*y , 1.0/x*y) where x,y = dimensions of original image.
+		lamdbda : lambda parameter for the calculation of the hesitation degree . Default = 0.2 
+		level = if True returns level
+		value = if True returns the value of the distance
+		If both level and value are True then it returns a list [value , level]
+		ty =  can be 1-20 or l,e,c. etc it depends on the the function tha will be called
+	Returns:
+		level: Threshold level calculated.
+		value: Value of the distance of the corresponding threshold value.
+
+misc_Threshold(Ia, Ib, mis, k=0.5, lamdbda=0.2, mask=np.array([]), mask2=np.array([]), value=False, level=True):
+	calculates the threshold value for the image using the selected misc function.
+
+	Parameters : 
+		Ia , Ib = 2-D matrix containing in the first row the membership values,
+    			in the second the non-membership values and in the third the hesitation
+    			degree.
+		mask = , mask2 = Mask used to skip pixels that belong to the black part of the mask.
+		mis =  the name of the misc Function it can be one of these = {
+			'tamalikaDistance',
+          			'tamalikaDistance2',
+          			'tamalikaDistance3'				
+		}
+		k= 0.5 for quadratic index or 1 for linear index . Default = 0.5
+		level = if True returns level
+		value = if True returns the value of the distance
+		If both level and value are True then it returns a list [value , level]
+	Returns:
+		level: Threshold level calculated.
+		value: Value of the distance of the corresponding threshold value.
+
+
+
+IFS
+
+Functions :
+	Distances(Dist , A , B , type = None, p = None , w = None)
+	similarity(Sim , A , B , p = None , w = None , type = None , omegas = None , a = None , b = None , c = None , lamda = None)
+	miscs(name,A,B=None , k=None , x=None , y=None)
+	__Distances__()
+	__Simularities__()
+	__Misc__()
+	num_func(name)
+
+Distances(Dist , A , B , type = None, p = None , w = None):
+	Calculates distance between the intuitionistic fuzzy
+    	sets A and B.
+	
+	Parameters : 
+		Dist = Name of Function {
+		'FuzzyDistance' or 'defFuzzyDistance',
+          		'IFSDistance',
+          		'wangXinDistance',
+          		'yangChiclanaDistance',
+          		'grzegorDistance',
+          		'vlachSergDistance'
+		} 
+		A , B =  2-D matrix containing in the first row the membership values and
+        		in the second the non-membership values.
+		type =  Type of computed distance {
+		'H' for Hamming,
+		 'E' for Euclidean,
+		 'nH' for normalized Hamming and
+		 'nE' for normalized Euclidean.
+		}
+		w: weights for the computed distance
+		p: must be a positive integer
+
+	Return:
+		Distance measure of the selected Function
+
+similarity(Sim , A , B , p = None , w = None , type = None , omegas = None , a = None , b = None , c = None , lamda = None):
+	Calculates Simularity between the intuitionistic fuzzy
+    	sets A and B.
+
+	Parameters : 
+		Sim = Name of Function  {
+			'dengChunSimilarity',
+    			'liangShiSimilarity',
+    			'parkKwunLimSimilarity',
+    			'mitchellSimilarity',
+   			 'julHungLinSimilarity',
+    			'hungYangSimilarity',
+    			'yenSimilarity',
+    			'hwangYangSimilarity',
+   			'hungYangSimilarity2',
+    			'zhangFuSimilarity',
+    			'hungYangSimilarity3',
+    			'chenSimilarity',
+    			'hungYangDistance4',
+    			'hongKimSimilarity',
+    			'chenSimilarity2',
+    			'liuSimilarity',
+    			'iancuSimilarity',
+    			'songWangLeiXueSimilarity',
+    			'intarapaiboonSimilarity',
+   			'dengJiangFuSimilarity',
+    			'nguyenSimilarity',
+    			'chenChengLanSimilarity',
+    			'muthuKrishSimilarity'
+		}
+		w: weights for the computed distance. Default = np.full(x*y , 1.0/x*y) where x,y = dimensions of original image.
+		lamda : Frank family of t-operator parameter. Different cased of input:
+ 		                  0, 1, np.inf and other numbers.
+		w: weights for the computed distance.
+		p: must be a positive integer
+		type = can be 1-20 or H,nH,E,nE  or l,e,c. etc it depends on the the function tha will be called
+		omegas = matrix containing values that belong to [0,1]. The sum of the
+         			matrix must be equal to 1
+		a, b, c: Positive integers.
+	Return:
+		Simularity measure of the selected Function
+
+miscs(name,A,B=None , k=None , x=None , y=None)
+	Calculates Distance  between the intuitionistic fuzzy
+
+	Parameters : 
+		Sim = Name of Function  {
+			'tamalikaDistance',
+          			'tamalikaDistance2',
+          			'tamalikaDistance3'
+			}
+		k= 0.5 for quadratic index or 1 for linear index . Default = 0.5
+		x, y: dimensions of original image.
+	Return : 
+		Distance measure of the selected Function
+
+
+__Distances__():
+	prints the available functions 
+
+__Simularities__()
+	prints the available functions 
+
+__Misc__()
+	prints the available functions 
+
+num_func(name)
+	returns a list with the names of the functions (distances , simularities , miscs)
+	
+	parameter : 
+		name = dist for distances , sim for simularity , misc for misc
+	Returns:
+		a list with the names of the functions
+					
