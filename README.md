@@ -1,7 +1,7 @@
 # Project Title
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![GitHub issues](https://img.shields.io/github/issues/yourusername/repository)](https://github.com/yourusername/repository/issues)
+[![GitHub issues](https://img.shields.io/github/issues/NickDamianos/IFSPY)](https://github.com/NickDamianos/IFSPY/issues)
 [![GitHub stars](https://img.shields.io/github/stars/yourusername/repository)](https://github.com/yourusername/repository/stargazers)
 
 Brief description of your project.
