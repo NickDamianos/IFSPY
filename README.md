@@ -50,4 +50,4 @@ B[: , 1] = 1-B[:,0]
 
 Diverence = Miscellaneous.miscs('tamalikaDivergence' , A,B)
 print('Diverence : ' + str(Diverence))
-
+```
